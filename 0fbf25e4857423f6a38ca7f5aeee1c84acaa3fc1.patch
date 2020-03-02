@@ -1,0 +1,19 @@
+# HG changeset patch
+# User robin <robin@reportlab.com>
+# Date 1495525707 -3600
+# Node ID 0fbf25e4857423f6a38ca7f5aeee1c84acaa3fc1
+# Parent  0f6004ec2916b76cfbd0444de6f551bcb1949781
+fix bitbucket issue 113
+
+diff --git a/setup.py b/setup.py
+--- a/setup.py
++++ b/setup.py
+@@ -539,7 +539,7 @@
+                 ],
+             
+             #this probably only works for setuptools, but distutils seems to ignore it
+-            install_requires=['pillow>=2.4.0','pip>=1.4.1', 'setuptools>=2.2'],
++            install_requires=['pillow>=2.4.0'],
+             )
+         print()
+         print('########## SUMMARY INFO #########')
