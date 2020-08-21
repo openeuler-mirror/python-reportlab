@@ -2,7 +2,7 @@
 
 Name:             python-reportlab
 Version:          3.4.0
-Release:          10
+Release:          11
 Summary:          ReportLab library to create PDF documents and graphic
 License:          BSD
 URL:              https://www.reportlab.com/
@@ -85,5 +85,8 @@ popd
 %doc demos/ tools/
 
 %changelog
+* Fri Aug 21 2020 shixuantong <shixuantong@huawei.com> - 3.4.0-11
+- add release version for rebuild
+
 * Mon Mar 02 2020 Jiangping Hu <hujp1985@foxmail.com> - 3.4.0-10
 - Package init
