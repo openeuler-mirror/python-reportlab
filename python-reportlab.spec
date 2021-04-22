@@ -4,7 +4,7 @@ Name:             python-reportlab
 Version:          3.4.0
 Release:          12
 Summary:          ReportLab library to create PDF documents and graphic
-License:          BSD
+License:          LGPL-2.0-only
 URL:              https://www.reportlab.com/
 Source0:          https://pypi.python.org/packages/source/r/reportlab/reportlab-%{version}.tar.gz
 Patch0001:        0fbf25e4857423f6a38ca7f5aeee1c84acaa3fc1.patch
