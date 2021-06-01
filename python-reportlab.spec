@@ -2,7 +2,7 @@
 
 Name:             python-reportlab
 Version:          3.4.0
-Release:          11
+Release:          12
 Summary:          ReportLab library to create PDF documents and graphic
 License:          BSD
 URL:              https://www.reportlab.com/
@@ -14,7 +14,7 @@ The ReportLab Toolkit. An Open Source Python library for generating PDFs and gra
 
 %package -n     python3-reportlab
 Summary:        ReportLab library to create PDF documents and graphic
-BuildRequires:  python3-devel python3-pillow
+BuildRequires:  python3-devel python3-pillow gcc
 Requires:       dejavu-sans-fonts python3-pillow
 %{?python_provide:%python_provide python3-reportlab}
 
@@ -59,6 +59,9 @@ PYTHONPATH="`pwd`/`ls -d build/lib*`" %{__python3} docs/genAll.py
 %doc demos/ tools/
 
 %changelog
+* Mon May 31 2021 huanghaitao <huanghaitao8@huawei.com> - 3.4.0-12
+- Completing build dependencies
+
 * Fri 11 Sep 2020 wangyue<wangyue92@huawei.com> - 3.4.0-11
 - Remove python2-reportlab
 
