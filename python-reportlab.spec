@@ -2,13 +2,14 @@
 
 Name:             python-reportlab
 Version:          3.4.0
-Release:          13
+Release:          14
 Summary:          ReportLab library to create PDF documents and graphic
 License:          BSD
 URL:              https://www.reportlab.com/
 Source0:          https://pypi.python.org/packages/source/r/reportlab/reportlab-%{version}.tar.gz
 Patch0001:        0fbf25e4857423f6a38ca7f5aeee1c84acaa3fc1.patch
 Patch0002:        CVE-2019-17626.patch
+Patch0003:        fix_cannot_import_error.patch
 
 %description
 The ReportLab Toolkit. An Open Source Python library for generating PDFs and graphics.
@@ -60,6 +61,9 @@ PYTHONPATH="`pwd`/`ls -d build/lib*`" %{__python3} docs/genAll.py
 %doc demos/ tools/
 
 %changelog
+* Wed Jan 12 2022 Chengshaowei <chenshaowei3@huawei.com> - 3.4.0-14
+- Fix can not import error
+
 * Wed Jul 21 2021 yaoxin <yaoxin30@huawei.com> - 3.4.0-13
 - Fix CVE-2019-17626
 
