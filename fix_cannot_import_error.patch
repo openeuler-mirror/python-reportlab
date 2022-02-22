@@ -1,0 +1,12 @@
+diff -Nur reportlab-3.4.0/src/reportlab/lib/utils.py ../reportlab-3.4.0/src/reportlab/lib/utils.py
+--- reportlab-3.4.0/src/reportlab/lib/utils.py	2017-03-07 18:17:00.000000000 +0800
++++ reportlab-3.4.0/src/reportlab/lib/utils.py	2022-01-12 16:37:55.914924400 +0800
+@@ -5,7 +5,7 @@
+ __doc__='''Gazillions of miscellaneous internal utility functions'''
+ 
+ import os, sys, imp, time, types
+-from base64 import decodestring as base64_decodestring, encodestring as base64_encodestring
++from base64 import decodebytes as base64_decodestring, encodebytes as base64_encodestring
+ from reportlab import isPy3
+ from reportlab.lib.logger import warnOnce
+ from reportlab.lib.rltempfile import get_rl_tempfile, get_rl_tempdir, _rl_getuid
