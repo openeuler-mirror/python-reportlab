@@ -70,7 +70,7 @@ PYTHONPATH="`pwd`/`ls -d build/lib*`" %{__python3} docs/genAll.py
 * Mon May 31 2021 huanghaitao <huanghaitao8@huawei.com> - 3.4.0-12
 - Completing build dependencies
 
-* Fri 11 Sep 2020 wangyue<wangyue92@huawei.com> - 3.4.0-11
+* Fri Sep 11 2020 wangyue<wangyue92@huawei.com> - 3.4.0-11
 - Remove python2-reportlab
 
 * Mon Mar 02 2020 Jiangping Hu <hujp1985@foxmail.com> - 3.4.0-10
