@@ -3,12 +3,12 @@
 %bcond_without tests
 
 Name:             python-reportlab
-Version:          3.6.10
+Version:          3.6.12
 Release:          1
 Summary:          ReportLab library to create PDF documents and graphic
 License:          BSD
 URL:              https://www.reportlab.com/
-Source0:          https://pypi.python.org/packages/source/r/reportlab/reportlab-%{version}.tar.gz
+Source0:          https://files.pythonhosted.org/packages/b8/ac/10d68a650b321bd8c4d8cbefd9994e7727d57b381c9bdb0a013273011e62/reportlab-3.6.12.tar.gz
 BuildRequires:    libart_lgpl-devel freetype-devel
 
 %description
@@ -72,6 +72,9 @@ cp -a build/lib.%{python3_platform}-%{python3_version}/reportlab docs/userguide/
 %doc demos/ tools/
 
 %changelog
+* Tue Dec 13 2022 wubijie <wubijie@kylinos.cn> - 3.6.12-1
+- Update package to version 3.6.12
+
 * Thu Jun 23 2022 SimpleUpdate Robot <tc@openeuler.org> - 3.6.10-1
 - Upgrade to version 3.6.10
 
