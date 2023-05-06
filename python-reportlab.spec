@@ -4,7 +4,7 @@
 
 Name:             python-reportlab
 Version:          3.6.12
-Release:          1
+Release:          2
 Summary:          ReportLab library to create PDF documents and graphic
 License:          BSD
 URL:              https://www.reportlab.com/
@@ -57,9 +57,10 @@ CFLAGS="${CFLAGS:-${RPM_OPT_FLAGS} -Isrc/rl_addons/renderPM -I%{_includedir}/lib
 %check
 # Tests need in-build compiled Python modules to be executed
 # Tests pre-generate userguide PDF
-cp -a build/lib.%{python3_platform}-%{python3_version}/reportlab tests/
-cp -a build/lib.%{python3_platform}-%{python3_version}/reportlab docs/
-cp -a build/lib.%{python3_platform}-%{python3_version}/reportlab docs/userguide/
+cp -a build/lib.%{python3_platform}-cpython-%{python3_version_nodots}/reportlab tests/
+cp -a build/lib.%{python3_platform}-cpython-%{python3_version_nodots}/reportlab docs/
+cp -a build/lib.%{python3_platform}-cpython-%{python3_version_nodots}/reportlab docs/userguide/
+
 %{__python3} setup.py tests
 %endif
 
@@ -72,6 +73,9 @@ cp -a build/lib.%{python3_platform}-%{python3_version}/reportlab docs/userguide/
 %doc demos/ tools/
 
 %changelog
+* Sat May 6 2023 liyanan <thistleslyn@163.com> - 3.6.12-2
+- Fix compilation failure caused by setuptool upgrade 
+
 * Tue Dec 13 2022 wubijie <wubijie@kylinos.cn> - 3.6.12-1
 - Update package to version 3.6.12
 
