@@ -4,7 +4,7 @@
 
 Name:             python-reportlab
 Version:          3.6.12
-Release:          1
+Release:          2
 Summary:          ReportLab library to create PDF documents and graphic
 License:          BSD
 URL:              https://www.reportlab.com/
@@ -43,7 +43,9 @@ src/reportlab/rl_settings.py
 
 rm -rf src/reportlab.egg-info
 
-rm -rf src/rl_addons/renderPM/libart_lgpl
+%if "%toolchain" != "clang"
+	rm -rf src/rl_addons/renderPM/libart_lgpl
+%endif
 
 %build
 CFLAGS="${CFLAGS:-${RPM_OPT_FLAGS} -Isrc/rl_addons/renderPM -I%{_includedir}/libart-2.0}" LDFLAGS="${LDFLAGS:-${RPM_LD_FLAGS}}"\
@@ -72,6 +74,9 @@ cp -a build/lib.%{python3_platform}-%{python3_version}/reportlab docs/userguide/
 %doc demos/ tools/
 
 %changelog
+* Wed Jun 28 2023 yoo <sunyuechi@iscas.ac.cn> - 3.6.12-2
+- fix clang build error
+
 * Tue Dec 13 2022 wubijie <wubijie@kylinos.cn> - 3.6.12-1
 - Update package to version 3.6.12
 
